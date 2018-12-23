@@ -118,7 +118,7 @@ case phase_count is
 								next_state<=s1; new_phase_count<= phase_count - 1;
 						end if;
    when s3=>  avvio_contatore<='0';
-	               if(col="001" and row="0001") then next_state<=s0;
+	               if(col="001" and row="0001" and dir="10") then next_state<=s0;
 						else next_state<=current_state;
 						end if;
 end case;
